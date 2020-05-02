@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "gatsby";
 import Sidebar from "react-sidebar";
 import NavLinks from "./navlinks";
@@ -26,112 +26,93 @@ function SidebarContents() {
   );
 }
 
-class Navbar extends React.Component<any, any> {
-  constructor(props: any) {
-    super(props);
-    this.state = {
-      navbarPlaceholderHeight: 100,
-      sidebarOpen: false,
-    };
+const Navbar = (props: { placeholder: boolean }) => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [navbarPlaceholderHeight, setNavbarPlaceholderHeight] = useState(100);
+  const myNav = useRef<HTMLElement>(null);
 
-    this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
-    this.menuOpen = this.menuOpen.bind(this);
-  }
-
-  onSetSidebarOpen(open: any) {
-    this.setState({ sidebarOpen: open });
-  }
-
-  menuOpen(event: any) {
+  const menuOpen = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>): void => {
     event.preventDefault();
-    this.onSetSidebarOpen(true);
-  }
+    setSidebarOpen(true);
+  };
 
-  componentDidMount() {
-    this.changeNavbarPlaceholderHeight();
+  const changeNavbarPlaceholderHeight = () => {
+    if (myNav.current) {
+      const newNavbarPlaceholderHeight = myNav.current.offsetHeight;
+      setNavbarPlaceholderHeight(newNavbarPlaceholderHeight);
+    }
+  };
 
-    const logo = this.nav.querySelector(".logo");
+  useEffect(() => {
+    changeNavbarPlaceholderHeight();
 
-    logo.addEventListener("load", () => {
-      this.changeNavbarPlaceholderHeight();
-    });
+    if (myNav?.current) {
+      const logo = myNav.current.querySelector(".logo");
 
-    this.changeNavbarHeight();
-  }
+      if (logo) {
+        logo.addEventListener("load", () => {
+          changeNavbarPlaceholderHeight();
+        });
+      }
+    }
+  }, []);
 
-  changeNavbarHeight() {
-    /* While the name states changeNavbarHeight, this does not directly change the navbar height. It simply reduces the width of the logo, which reduces the height and thereby the overall navbar height.
-
-		Also this slightly reduces the vertical padding
-
-		*/
-
-    window.addEventListener("scroll", function () {
-      if (this.scrollY > 0 && document?.querySelector("nav")) {
-        document.querySelector("nav").classList.add("scrolled");
-      } else {
-        document.querySelector("nav").classList.remove("scrolled");
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (myNav.current) {
+        if (window.scrollY > 0) {
+          myNav.current.classList.add("scrolled");
+        } else {
+          myNav.current.classList.remove("scrolled");
+        }
       }
     });
-  }
+  }, []);
 
-  changeNavbarPlaceholderHeight() {
-    const navBar = document.querySelector("nav");
-    if (navBar) {
-      const navbarPlaceholderHeight = navBar.offsetHeight;
-      this.setState({
-        navbarPlaceholderHeight: navbarPlaceholderHeight,
-      });
-    }
-  }
-
-  render() {
-    const placeholder = this.props.placeholder;
-    return (
-      <React.Fragment>
-        <Sidebar
-          sidebar={<SidebarContents />}
-          open={this.state.sidebarOpen}
-          onSetOpen={this.onSetSidebarOpen}
-          sidebarClassName="sidebar-content"
-          styles={{
-            sidebar: {
-              zIndex: 101,
-              position: "fixed",
-            },
-            overlay: {
-              zIndex: 100,
-            },
-            dragHandle: {
-              position: "fixed",
-              zIndex: "99999",
-            },
+  return (
+    <React.Fragment>
+      <Sidebar
+        sidebar={<SidebarContents />}
+        open={sidebarOpen}
+        onSetOpen={setSidebarOpen}
+        sidebarClassName="sidebar-content"
+        styles={{
+          sidebar: {
+            zIndex: "101",
+            position: "fixed",
+          },
+          overlay: {
+            zIndex: "100",
+          },
+          dragHandle: {
+            position: "fixed",
+            zIndex: "99999",
+          },
+        }}
+      >
+        <span></span>
+      </Sidebar>
+      <nav className="text-secondary" ref={myNav}>
+        <a href="#mobilenav" id="menu-open" onClick={menuOpen}>
+          <span className="icon">
+            <Hamburger />
+          </span>
+        </a>
+        <Link to="/">
+          <Logo />
+        </Link>
+        <NavLinks />
+      </nav>
+      {props.placeholder && (
+        <div
+          className="navbar-placeholder"
+          style={{
+            height: navbarPlaceholderHeight + "px",
           }}
-        >
-          <span></span>
-        </Sidebar>
-        <nav className="text-secondary" ref={(c) => (this.nav = c)}>
-          <a href="#mobilenav" id="menu-open" onClick={this.menuOpen}>
-            <span className="icon">
-              <Hamburger />
-            </span>
-          </a>
-          <Link to="/">
-            <Logo />
-          </Link>
-          <NavLinks />
-        </nav>
-        {placeholder && (
-          <div
-            className="navbar-placeholder"
-            style={{
-              height: this.state.navbarPlaceholderHeight + "px",
-            }}
-          ></div>
-        )}
-      </React.Fragment>
-    );
-  }
-}
+        ></div>
+      )}
+    </React.Fragment>
+  );
+};
 
 export default Navbar;
