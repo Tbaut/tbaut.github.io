@@ -33,7 +33,7 @@ const ThemeSwitchButton = (props: { darkMode: boolean }) => {
   let localDarkMode: boolean;
 
   if (typeof localStorage !== `undefined`) {
-    localDarkMode = localStorage.getItem("darkMode") === "true";
+    localDarkMode = localStorage.getItem("darkMode") !== "false";
   } else {
     localDarkMode = props.darkMode || true;
   }
@@ -73,7 +73,7 @@ export default function () {
             name
             url
           }
-          darkmode
+          darkMode
           switchTheme
         }
       }
@@ -87,7 +87,7 @@ export default function () {
   });
 
   if (data.site.siteMetadata.switchTheme) {
-    list.push(<ThemeSwitchButton key="themeswitcher" darkMode={data.site.siteMetadata.darkmode} />);
+    list.push(<ThemeSwitchButton key="themeswitcher" darkMode={data.site.siteMetadata.darkMode} />);
   }
 
   return <ul className="navbar-links">{list}</ul>;

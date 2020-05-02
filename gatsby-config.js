@@ -11,7 +11,7 @@ const siteMetadata = {
   description: "Welcome to my personal website.",
   author: "Thibaut Sardan",
   portfolioItemsPerPage: 10,
-  darkmode: true,
+  darkMode: true,
   switchTheme: true,
   navLinks: [
     {

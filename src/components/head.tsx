@@ -7,7 +7,6 @@ function Header() {
     query {
       site {
         siteMetadata {
-          darkmode
           icon
         }
       }
