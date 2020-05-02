@@ -97,7 +97,7 @@ const IndexPage = (props: any) => {
           <SocialLinks />
         </div>
       </div>
-      <PortfolioList />
+      {/* <PortfolioList /> */}
     </Layout>
   );
 };

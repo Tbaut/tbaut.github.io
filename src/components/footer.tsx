@@ -2,9 +2,10 @@ import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import Logo from "./logo";
 import Navlinks from "./navlinks";
+import styled from "styled-components";
 import "../style/footer.less";
 
-export default function () {
+const Footer = function ({ className }: { className?: string }) {
   const query = useStaticQuery(graphql`
     query {
       site {
@@ -16,7 +17,7 @@ export default function () {
   `);
 
   return (
-    <footer className="footer">
+    <footer className={"footer " + className}>
       <div className="container">
         <div className="logo">
           <Link to="/" title={query.site.siteMetadata.title}>
@@ -32,4 +33,10 @@ export default function () {
       </div>
     </footer>
   );
-}
+};
+
+export default styled(Footer)`
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+`;

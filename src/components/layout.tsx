@@ -23,4 +23,8 @@ const Layout = ({ className, placeholder, children }: Props) => {
 export default styled(Layout)`
   position: relative;
   min-height: 100vh;
+
+  .wrapper {
+    padding-bottom: 14rem;
+  }
 `;
