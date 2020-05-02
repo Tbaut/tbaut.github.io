@@ -5,7 +5,7 @@ const siteMetadata = {
   header: "Hi, I'm Thibaut",
   capitalizeTitleOnHome: true,
   logo: "/images/logo.png",
-  icon: "/images/icon.png",
+  icon: "/images/logo.png",
   titleImage: "/images/wall.jpg",
   introTag: "JS/TS dev & Product with ❤️",
   description: "Welcome to my personal website.",

@@ -30,8 +30,14 @@ function ListItem(props: any) {
 }
 
 const ThemeSwitchButton = (props: { darkMode: boolean }) => {
-  const localDarkMode = localStorage.getItem("darkMode") || props.darkMode || true;
-  const [darkMode, setDarkMode] = useState<boolean>(localDarkMode === "true");
+  let localDarkMode: boolean;
+
+  if (typeof localStorage !== `undefined`) {
+    localDarkMode = localStorage.getItem("darkMode") === "true";
+  } else {
+    localDarkMode = props.darkMode || true;
+  }
+  const [darkMode, setDarkMode] = useState<boolean>(localDarkMode);
 
   useEffect(() => {
     document.body.className = darkMode ? "dark-mode" : "";

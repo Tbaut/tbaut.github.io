@@ -6,7 +6,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "start": "npm run develop",
+    "start": "yarn develop",
     "test": "tsc"
   },
   "dependencies": {
