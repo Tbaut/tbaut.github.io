@@ -1,5 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
+import styled from "styled-components";
+import { checkPropTypes } from "prop-types";
 
 function ListItem(props: any) {
   const data = props.data;
@@ -12,7 +14,7 @@ function ListItem(props: any) {
   );
 }
 
-export default function () {
+const SocialLinks = function ({ className }: { className?: string }) {
   const data = useStaticQuery(graphql`
     query SocialQuery {
       site {
@@ -31,5 +33,28 @@ export default function () {
   items.forEach(function (e: any, i: any) {
     list.push(<ListItem key={e.url + "-" + e.icon + "-" + i} data={e} />);
   });
-  return <ul className="social-links">{list}</ul>;
-}
+  return <ul className={"social-links " + className}>{list}</ul>;
+};
+
+export default styled(SocialLinks)`
+  list-style: none;
+
+  li {
+    margin: 5px 0;
+    img {
+      opacity: 0.7;
+      width: 48px;
+      transition: opacity 0.25s;
+    }
+
+    &:hover {
+      img {
+        opacity: 1;
+      }
+    }
+  }
+
+  & img {
+    filter: invert(49%) sepia(45%) saturate(1234%) hue-rotate(197deg) brightness(100%) contrast(75%);
+  }
+`;

@@ -1,17 +1,26 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import Head from "./head";
 import Navbar from "./navbar";
 import Footer from "./footer";
+import styled from "styled-components";
 
-const Layout = ({ placeholder, children }: any) => {
+interface Props {
+  className?: string;
+  children?: ReactNode;
+  placeholder?: boolean;
+}
+const Layout = ({ className, placeholder, children }: Props) => {
   return (
-    <React.Fragment>
+    <div className={className}>
       <Head />
       <Navbar placeholder={placeholder === undefined ? true : placeholder} />
       <div className="wrapper">{children}</div>
       <Footer />
-    </React.Fragment>
+    </div>
   );
 };
 
-export default Layout;
+export default styled(Layout)`
+  position: relative;
+  min-height: 100vh;
+`;

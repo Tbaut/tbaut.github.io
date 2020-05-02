@@ -2,7 +2,6 @@ import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import Logo from "./logo";
 import Navlinks from "./navlinks";
-import FooterLinks from "./footer-links";
 import "../style/footer.less";
 
 export default function () {
@@ -26,9 +25,6 @@ export default function () {
         </div>
         <div className="navlinks text-secondary">
           <Navlinks />
-        </div>
-        <div className="navlinks text-secondary" style={{ marginTop: "20px" }}>
-          <FooterLinks />
         </div>
         <p className="text-primary f-d">
           &copy; {new Date().getFullYear()} {query.site.siteMetadata.title}

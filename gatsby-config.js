@@ -9,7 +9,7 @@ const siteMetadata = {
   titleImage: "/images/wall.jpg",
   introTag: "JS/TS dev & Product with ❤️",
   description: "Welcome to my personal website.",
-  author: "@_akzhy",
+  author: "Thibaut Sardan",
   portfolioItemsPerPage: 10,
   darkmode: true,
   switchTheme: true,
@@ -22,16 +22,10 @@ const siteMetadata = {
       name: "ABOUT",
       url: "/about",
     },
-    {
-      name: "PORTFOLIO",
-      url: "/portfolio",
-    },
-  ],
-  footerLinks: [
-    {
-      name: "PRIVACY POLICY",
-      url: "/privacy-policy",
-    },
+    // {
+    //   name: "PORTFOLIO",
+    //   url: "/portfolio",
+    // },
   ],
   social: [
     {
@@ -86,8 +80,7 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "contents",
-        path: "./src/contents",
+        path: "./",
       },
     },
     {
