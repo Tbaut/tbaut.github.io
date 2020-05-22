@@ -8,7 +8,7 @@ import "../style/basepage.less";
 export default function ({ data }) {
   return (
     <Layout>
-      <SEO
+      {/* <SEO
         lang="en"
         title={data.markdownRemark.frontmatter.title}
         description={data.markdownRemark.frontmatter.description}
@@ -34,29 +34,29 @@ export default function ({ data }) {
             ></div>
           </div>
         </article>
-      </div>
+      </div> */}
     </Layout>
   );
 }
 
-export const query = graphql`
-  query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      frontmatter {
-        title
-        description
-        image {
-          publicURL
-          childImageSharp {
-            fluid(maxWidth: 1920) {
-              srcSet
-              ...GatsbyImageSharpFluid
-            }
-            id
-          }
-        }
-      }
-    }
-  }
-`;
+// export const query = graphql`
+//   query($slug: String!) {
+//     markdownRemark(fields: { slug: { eq: $slug } }) {
+//       html
+//       frontmatter {
+//         title
+//         description
+//         image {
+//           publicURL
+//           childImageSharp {
+//             fluid(maxWidth: 1920) {
+//               srcSet
+//               ...GatsbyImageSharpFluid
+//             }
+//             id
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;

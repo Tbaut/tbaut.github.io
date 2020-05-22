@@ -25,6 +25,7 @@ const About = function ({ data, className }: any) {
               </div>
             </div>
             <div className="col s12 m8 l8 bio">
+              <h1 className="title">About me</h1>
               I'm software developer passionate about web3 and privacy. I've been a product manager several years before
               becoming a full stack JS/TS developer. I have an eye for good UX, and I like clean code :)
               <br />
@@ -49,10 +50,20 @@ const About = function ({ data, className }: any) {
 export default styled(About)`
   .profile-pic img {
     border-radius: 50%;
+    margin-top: 0.1rem;
+  }
+
+  .content {
+    margin-top: 0;
+  }
+
+  h1.title {
+    font-size: 3rem;
+    margin-top: 0.1rem;
   }
 
   .bio {
-    padding: 2rem;
+    padding: 0 2rem 2rem 2rem;
   }
 
   .social-links {
@@ -68,7 +79,7 @@ export default styled(About)`
 
 export const query = graphql`
   query {
-    fileName: file(relativePath: { eq: "static/images/Thibaut-Sardan.jpg" }) {
+    fileName: file(relativeDirectory: { eq: "profile-pic" }) {
       childImageSharp {
         fluid(maxWidth: 800) {
           ...GatsbyImageSharpFluid

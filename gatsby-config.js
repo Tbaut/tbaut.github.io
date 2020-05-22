@@ -22,10 +22,10 @@ const siteMetadata = {
       name: "ABOUT",
       url: "/about",
     },
-    // {
-    //   name: "PORTFOLIO",
-    //   url: "/portfolio",
-    // },
+    {
+      name: "PHOTOS",
+      url: "/photos",
+    },
   ],
   social: [
     {
@@ -80,7 +80,7 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        path: "./",
+        path: `${__dirname}/src/contents`,
       },
     },
     {
