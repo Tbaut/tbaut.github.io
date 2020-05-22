@@ -74,7 +74,7 @@ const Photos = function ({ data, className }: { data: any; className?: string })
       <SEO
         lang="en"
         title={"Photos by Thibaut Sardan"}
-        description={"Some of my best pictures taken around the world."}
+        description={"Some of my favourite pictures taken while traveling here or there."}
       />
 
       <h1 className="title">Some of my pictures</h1>

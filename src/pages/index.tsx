@@ -4,7 +4,6 @@ import { graphql } from "gatsby";
 import SEO from "../components/seo";
 import { Link } from "gatsby";
 import SocialLinks from "../components/sociallinks";
-import PortfolioList from "../components/list-portfolio";
 import "../style/wall.less";
 
 const IndexPage = (props: any) => {
@@ -62,7 +61,11 @@ const IndexPage = (props: any) => {
 
   return (
     <Layout placeholder={false}>
-      <SEO lang="en" title={props.data.site.siteMetadata.title} />
+      <SEO
+        lang="en"
+        title={props.data.site.siteMetadata.title}
+        description="Welcome to my personal website. I am a JS/TS developer passionate about web3, privacy and UX! I'm also a hobby photographer, shooting mostly when I travel."
+      />
       <div className="wall" style={{ height: winHeight + "px" }}>
         <div className="intro container">
           <div className="main-title text-primary">

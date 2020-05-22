@@ -14,7 +14,7 @@ const About = function ({ data, className }: any) {
       <SEO
         lang="en"
         title={"About Thibaut Sardan"}
-        description={"I am a software engineer passionate about web3 and privacy."}
+        description={"I'm software engineer passionate about web3, privacy and.. good UX!"}
       />
       <div className={"container " + className}>
         <article className="post">
@@ -26,8 +26,9 @@ const About = function ({ data, className }: any) {
             </div>
             <div className="col s12 m8 l8 bio">
               <h1 className="title">About me</h1>
-              I'm software developer passionate about web3 and privacy. I've been a product manager several years before
-              becoming a full stack JS/TS developer. I have an eye for good UX, and I like clean code :)
+              I'm software engineer passionate about web3, privacy and.. good UX! I know, there's still a long way to go
+              to to make web3 easy to use, but I like challenges! I've been a product manager several years before
+              becoming a full stack JS/TS developer.
               <br />
               <br /> I believe that the best PMs are those who understand the code of their products, and the best
               developers those who understand their users and the market in which their software evolves.
