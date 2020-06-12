@@ -27,8 +27,8 @@ const About = function ({ data, className }: any) {
             <div className="col s12 m8 l8 bio">
               <h1 className="title">About me</h1>
               I'm software engineer passionate about web3, privacy and.. good UX! I know, there's still a long way to go
-              to to make web3 easy to use, but I like challenges! I've been a product manager several years before
-              becoming a full stack JS/TS developer.
+              to make web3 easy to use, but I like challenges! I've been a product manager several years before becoming
+              a full stack JS/TS developer.
               <br />
               <br /> I believe that the best PMs are those who understand the code of their products, and the best
               developers those who understand their users and the market in which their software evolves.
