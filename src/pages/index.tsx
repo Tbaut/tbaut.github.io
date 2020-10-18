@@ -64,7 +64,7 @@ const IndexPage = (props: any) => {
       <SEO
         lang="en"
         title={props.data.site.siteMetadata.title}
-        description="Welcome to my personal website. I am a JS/TS developer passionate about web3, privacy and UX! I'm also a hobby photographer, shooting mostly when I travel."
+        description="Welcome to my personal website. I am a TS/JS developer passionate about web3, privacy and UX! I'm also a hobby photographer, shooting mostly when I travel."
       />
       <div className="wall" style={{ height: winHeight + "px" }}>
         <div className="intro container">

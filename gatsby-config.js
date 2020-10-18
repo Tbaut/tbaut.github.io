@@ -7,7 +7,7 @@ const siteMetadata = {
   logo: "/images/logo.png",
   icon: "/images/logo.png",
   titleImage: "/images/wall.jpg",
-  introTag: "JS/TS dev & Product with ❤️",
+  introTag: "TS/JS dev & Product with ❤️",
   description: "Welcome to my personal website.",
   author: "Thibaut Sardan",
   portfolioItemsPerPage: 10,

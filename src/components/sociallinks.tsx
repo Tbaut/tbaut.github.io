@@ -1,7 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
-import { checkPropTypes } from "prop-types";
 
 function ListItem(props: any) {
   const data = props.data;
