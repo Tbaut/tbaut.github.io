@@ -46,7 +46,7 @@ export default [
     date: "2019-11-05",
     location: "Ukiyo conference in Osaka, Japan",
     name: "2019-11-05 - Ukiyo Osaka - WFP.png",
-    title: "How a blockchain tech helps refugees receive assistance",
+    title: "How a blockchain tech helps refugees",
     url: "https://www.youtube.com/watch?v=tXOXxwpAIGk",
   },
   {
