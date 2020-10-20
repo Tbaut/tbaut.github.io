@@ -74,10 +74,10 @@ const Photos = function ({ data, className }: { data: any; className?: string })
       <SEO
         lang="en"
         title={"Photos by Thibaut Sardan"}
-        description={"Some of my favourite pictures taken while traveling here or there."}
+        description={"Some of my favourite photos taken while traveling here or there."}
       />
 
-      <h1 className="title">Some of my pictures</h1>
+      <h1 className="title">Some of my photos</h1>
       <div className={`fullscreen ${fullScreen ? "" : "hidden"}`} onClick={handleClose}>
         <div className={"close"} onClick={handleClose}>
           <FontAwesomeIcon icon={faTimesCircle} />

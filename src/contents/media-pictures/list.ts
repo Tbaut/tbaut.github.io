@@ -46,7 +46,7 @@ export default [
     date: "2019-11-05",
     location: "Ukiyo conference in Osaka, Japan",
     name: "2019-11-05 - Ukiyo Osaka - WFP.png",
-    title: "Ethereum client for refugees",
+    title: "How a blockchain tech helps refugees receive assistance",
     url: "https://www.youtube.com/watch?v=tXOXxwpAIGk",
   },
   {
@@ -81,7 +81,7 @@ export default [
     date: "2020-08-25",
     name: "2020-08-25 - Polkadot governance polkassembly.png",
     title: "How does Polkadot governance work",
-    location: "Meetup online",
+    location: "Online meetup",
     url: "https://tube.piweb.be/videos/watch/acc2590f-99c8-446b-a872-0a3943cf752d",
   },
 ] as MediaList[];
