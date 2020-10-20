@@ -77,4 +77,11 @@ export default [
     title: "The UX challenges to build on a light client",
     url: "https://www.youtube.com/watch?v=K0aC9d83euI",
   },
+  {
+    date: "2020-08-25",
+    name: "2020-08-25 - Polkadot governance polkassembly.png",
+    title: "How does Polkadot governance work",
+    location: "Meetup online",
+    url: "https://tube.piweb.be/videos/watch/acc2590f-99c8-446b-a872-0a3943cf752d",
+  },
 ] as MediaList[];
