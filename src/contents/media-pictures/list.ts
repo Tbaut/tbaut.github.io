@@ -84,4 +84,11 @@ export default [
     location: "Online meetup",
     url: "https://tube.piweb.be/videos/watch/acc2590f-99c8-446b-a872-0a3943cf752d",
   },
+  {
+    date: "2021-01-21",
+    name: "2021-01-21 - Manage account Polkadot js extension.png",
+    title: "How to securely manage your account with Polkadot-js extension",
+    location: "Online meetup",
+    url: "https://tube.piweb.be/videos/watch/aa4e8b2b-a58d-49cb-abec-02a3e714ed4a",
+  },
 ] as MediaList[];
