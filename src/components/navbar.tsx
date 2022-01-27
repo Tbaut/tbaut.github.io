@@ -8,7 +8,7 @@ import { Hamburger } from "./icons";
 
 import "../style/navbar.less";
 
-function SidebarContents() {
+const SidebarContents = () => {
   return (
     <div className="sidebar-contents">
       <div className="logo">
@@ -24,7 +24,7 @@ function SidebarContents() {
       </div>
     </div>
   );
-}
+};
 
 const Navbar = (props: { placeholder: boolean }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
