@@ -62,14 +62,14 @@ const About = function ({ data, className }: Props) {
             </div>
             <div className="col s12 m8 l8 bio">
               <h1 className="title">About me</h1>
-              I'm software engineer passionate about web3, privacy and.. good UX! I know, there's still a long way to go
-              to make web3 easy to use, but I like challenges! I've been a product manager several years before becoming
-              a full stack TS/JS developer.
+              I'm a software engineer passionate about web3, privacy, and.. good UX! I know, there's still a long way to
+              go to make web3 easy to use, but I like challenges! I've been a product manager for several years before
+              becoming a full-stack TS/JS developer.
               <br />
               <br /> I believe that the best PMs are those who understand the code of their products, and the best
               developers those who understand their users and the market in which their software evolves.
               <br />
-              <br /> I like bouldering, travelling, and photography. You can find out about my code on Github, my
+              <br /> I like bouldering, traveling, and photography. You can find out about my code on Github, my
               writings on Medium, some of my photographs{" "}
               <Link className="text-secondary" to="/photos">
                 here
