@@ -91,4 +91,11 @@ export default [
     location: "Online meetup",
     url: "https://tube.piweb.be/videos/watch/aa4e8b2b-a58d-49cb-abec-02a3e714ed4a",
   },
+  {
+    date: "2022-04-29",
+    name: "2021-04-29 - Keep funds safe offline.png",
+    title: "How to securely manage your account with Polkadot-js extension",
+    location: "Amsterdot in Amsterdam, The Netherland",
+    url: "https://www.youtube.com/watch?v=FlAYT9uOaXU",
+  },
 ] as MediaList[];
