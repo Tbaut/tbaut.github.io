@@ -1,0 +1,8 @@
+Building using
+
+```bash
+yarn --version
+1.22.10
+node --version
+v14.17.0
+```

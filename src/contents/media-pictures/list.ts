@@ -98,4 +98,18 @@ export default [
     location: "Amsterdot in Amsterdam, The Netherland",
     url: "https://www.youtube.com/watch?v=FlAYT9uOaXU",
   },
+  {
+    date: "2023-06-29",
+    name: "2023-06-29 - How to manage complex multisigs.jpg",
+    title: "Multisigs made simple",
+    location: "Polkadot Decoded in Copenhagen, Danmark",
+    url: "https://www.youtube.com/watch?v=cQymHtreDUA",
+  },
+  {
+    date: "2023-09-19",
+    name: "2023-09-19 - Use a Multisig to do x.jpg",
+    title: "Multix - use a Multisig to do x",
+    location: "Sub0 in Lisbon, Portugal",
+    url: "https://www.youtube.com/watch?v=rmBhErBOVJM",
+  },
 ] as MediaList[];
