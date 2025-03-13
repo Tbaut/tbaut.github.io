@@ -112,4 +112,11 @@ export default [
     location: "Sub0 in Lisbon, Portugal",
     url: "https://www.youtube.com/watch?v=rmBhErBOVJM",
   },
+  {
+    date: "2024-11-10",
+    name: "2024-11-10 - You too can migrate to PAPI.jpg",
+    title: "You too can migrate to PAPI",
+    location: "Sub0 in Bangkok, Thailand",
+    url: "https://www.youtube.com/watch?v=fRI96YD105E",
+  },
 ] as MediaList[];
